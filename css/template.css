@@ -1,0 +1,459 @@
+@import url("https://use.typekit.net/sps6gfx.css");
+
+*  { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL STYLES */
+
+::selection {
+    background: #E37F3D; 
+    color: #FFF7EA;
+}
+::-moz-selection {
+    background: #E37F3D;
+    color: #FFF7EA;
+}
+
+body {
+    font: 400 1.125rem/1.625rem covik-sans, sans-serif;;
+    background: url(../img/background.gif) center / cover no-repeat ;
+    color: #323539;
+}
+
+#guideBox {
+    overflow-y: hidden;
+    position: relative;
+}
+
+p {
+    max-width: 27.5rem;
+    margin-bottom: 1rem;
+}
+
+.fullScreen {
+    height: 100vh;
+    width: 100vw;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+h1 {
+    font: 5rem/4.5rem beastly, sans-serif;
+    color: #FFF7EA;
+    left: 50%;
+    top: 43%;
+    transform: translateY(-100%);
+}
+
+h2 {
+    font: 4.5rem/4.25rem beastly, sans-serif;
+}
+
+h3 {
+    font: 3rem/1.875rem funkydori, sans-serif;
+    margin: 2rem 0 .5rem;
+}
+
+/* MAIN CONTENT */
+
+#startScreen {
+    background: url(../img/startBlue.gif) center / cover no-repeat;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+#startBtn {
+    left: 50%;
+    bottom: 42%;
+    cursor: pointer;
+    animation: slide-right .5s cubic-bezier(.39,.575,.565,1.000) infinite alternate both;
+}
+
+#startBtn:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@keyframes slide-right{
+    0%{transform:translate(0, 100%);}
+    100%{transform:translate(25px, 100%);}
+}
+
+#pBass {
+    left: 50%;
+    top: 51%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1300px;
+}
+
+#guideNav {
+    top: 50%;
+    left: -300%;
+    transform: translateY(-50%);
+    z-index: 6666;
+}
+
+ul {
+    font: 400 1.75rem/2rem covik-sans, sans-serif;
+    list-style: none;
+    max-width: 21rem;
+}
+
+ul li {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    animation: out-slide-right-menu .5s cubic-bezier(.39,.575,.565,1.000) normal both;
+}
+
+ul li:hover {
+    color: #E37F3D;
+    animation: in-slide-right-menu .5s cubic-bezier(.39,.575,.565,1.000) normal both;
+}
+
+@keyframes in-slide-right-menu{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(20px);}
+}
+
+@keyframes out-slide-right-menu{
+    0%{transform:translateX(20px);}
+    100%{transform:translateX(0);}
+}
+
+#headstockBass {
+    bottom: -100%;
+    right: 25%;
+    transform: translateX(50%);
+    height: 90vh;
+}
+
+.backStart {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pageNav {
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 1.5rem;
+    right: 2%;
+    z-index: 7777;
+}
+
+.pageNav > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pageNav > div:nth-child(1) img {
+    margin: 0 .5rem;
+    animation: out-slide-left-arrow .5s cubic-bezier(.39,.575,.565,1.000) normal both;
+}
+
+.pageNav > div:nth-child(2) img,
+#fb4 > div img,
+#fb5 > div img {
+    margin: 0 .5rem;
+    animation: out-slide-right-arrow .5s cubic-bezier(.39,.575,.565,1.000) normal both;
+}
+
+.pageNav > div:nth-child(1):hover img {
+    margin: 0 .5rem;
+    animation: in-slide-left-arrow .5s cubic-bezier(.39,.575,.565,1.000) normal both;
+}
+
+.pageNav > div:nth-child(2):hover img,
+#fb4 > div:hover img,
+#fb5 > div:hover img {
+    margin: 0 .5rem;
+    animation: in-slide-right-arrow .5s cubic-bezier(.39,.575,.565,1.000) normal both;
+}
+
+@keyframes in-slide-left-arrow{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-5px);}
+}
+
+@keyframes out-slide-left-arrow{
+    0%{transform:translateX(-5px);}
+    100%{transform:translateX(0);}
+}
+
+@keyframes in-slide-right-arrow{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(5px);}
+}
+
+@keyframes out-slide-right-arrow{
+    0%{transform:translateX(5px);}
+    100%{transform:translateX(0);}
+}
+
+.flexend {
+    justify-content: flex-end;
+}
+
+#circleTitle {
+    width: 130vh;
+    top: 50%;
+    left: -100%;
+}
+
+.menu {
+    top: 3rem;
+    left: -6rem;
+    width: 3rem;
+    transform: translate(-50%, -50%);
+    z-index: 99999999;
+    cursor: pointer;
+}
+
+.menu:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.backgrounds {
+    height: 100vh;
+    width: 48vw;
+    top: 0;
+    left: 0;
+    z-index: 1111;
+    opacity: 0;
+}
+
+#background1 {
+    background: url(../img/villageVanguard.png) center / cover no-repeat;
+}
+
+#background2 {
+    background: url(../img/fenderWarehouses.png) center / cover no-repeat;
+}
+
+#background3 {
+    background: url(../img/tonicRoom.png) center / cover no-repeat;
+}
+
+#background4 {
+    background: url(../img/motown.png) center / cover no-repeat;
+}
+
+#background5 {
+    background: url(../img/audience.png) center / cover no-repeat;
+}
+
+#background6 {
+    background: url(../img/weatherreport.png) center / cover no-repeat;
+}
+
+.textBox {
+    max-width: 29.6875rem;
+    right: 25%;
+    top: 49%;
+    transform: translate(50%, -50%);
+    z-index: 3333;
+    opacity: 0;
+}
+
+.imgPos {
+    left: -60%;
+    bottom: 0;
+    z-index: 4444;
+}
+
+#bassText h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+}
+
+#fenderText h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+}
+
+#roleText h2 {
+    margin-bottom: 1rem;
+}
+
+#jacoText h3 {
+    font-size: 2.5rem;
+}
+
+#paulChambers {
+    height: 92%;
+    transform: translateX(-50%);
+}
+
+#leoFender {
+    width: 60%;
+}
+
+#vulfpeckBand {
+    width: 52%;
+}
+
+#jamesJamerson {
+    height: 65%;
+    transform: translateX(-50%);
+}
+
+#larryGraham {
+    height: 75%;
+    transform: translateX(-50%);
+}
+
+#jacoPastorius {
+    height: 52%;
+    transform: translateX(-50%);
+}
+
+#jamesJamerson:hover,
+#larryGraham:hover,
+#jacoPastorius:hover {
+    transform: translateX(-50%) scale(1.05);
+    z-index: 4445;
+}
+
+#playHeading,
+#influentialHeading {
+    width: 100%;
+    text-align: center;
+    top: -25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#styleRow {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    max-width: 900px;
+    bottom: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 5555;
+}
+
+#styleRow > div {
+    width: 237px;
+}
+
+#styleRow img {
+    width: 300px;
+}
+
+.playStyle {
+    width: 250px;
+    height: 250px;
+    border-radius: 99999px;
+}
+
+#styleRow img,
+.playStyle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rotate1 {
+    animation: rotation 9.5s linear;
+}
+
+.rotate2 {
+    animation: rotation 8s linear;
+}
+
+.rotate3 {
+    animation: rotation 14s linear;
+}
+
+.rotate4 {
+    animation: rotation 20s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(359deg);
+  }
+}
+
+#fingerstyle {
+    background: url(../img/fingerpickin-still.gif) center / cover no-repeat;
+}
+
+#fingerstyle:hover {
+    background: url(../img/fingerpickin.gif) center / cover no-repeat;
+}
+
+#slap {
+    background: url(../img/slap-still.gif) center / cover no-repeat;
+}
+
+#slap:hover {
+    background: url(../img/slap.gif) center / cover no-repeat;
+}
+
+#pick {
+    background: url(../img/pick-still.gif) center / cover no-repeat;
+}
+
+#pick:hover {
+    background: url(../img/pick.gif) center / cover no-repeat;
+}
+
+.playPauseBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.playPauseBox p {
+    margin-top: .5rem;
+}
+
+.playPauseBox p:hover {
+    color: #E37F3D;
+}
+
+.playPause {
+    width: 3.5rem;
+    margin-right: 1rem;
+}
+
+.playPause:hover {
+    transform: scale(1.1);
+}
+
+#jamersonStop,
+#grahamStop,
+#jacoStop {
+    display: none;
+}
